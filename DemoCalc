@@ -1,0 +1,110 @@
+using System;
+
+namespace Demo
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			//Variable Initiation
+			int choice;
+			string Terminate="PlaceHolder";
+			//Intro
+			Console.WriteLine("Hello! Welcome to the Command Line Calc!\n");
+			Console.WriteLine("Enter a number based on what you need to do:\n");
+			while (Terminate != "")
+			{
+			Console.Write("1:Add\n2:Subtract\n3.Divide\n4.Multiple\n");
+
+			//Variable Usage
+			choice = Convert.ToInt32(Console.ReadLine());
+
+				//Choice (IF COMANDS SHORTEN Version)
+
+				switch (choice)
+				{
+					case 1:
+						Add();
+						Console.WriteLine("\nPress Any key to continue");
+						Console.ReadKey();
+						break;
+					case 2:
+						Subtract();
+						Console.WriteLine("\nPress Any key to continue");
+						Console.ReadKey();
+						break;
+					case 3:
+						Divide();
+						Console.WriteLine("\nPress Any key to continue");
+						Console.ReadKey();
+						break;
+					case 4:
+						Multiply();
+						Console.WriteLine("\nPress Any key to continue");
+						Console.ReadKey();
+						break;
+					default:
+						break;
+				}
+				Console.Write("\nPress Enter to Terminate or Any other key to try other option.");
+				Terminate = Console.ReadLine();
+			}
+			return;
+		}
+		public static void Add()
+		{
+			//BASIC ADDITION THINGAMAJIGGER
+			double in1, in2;
+			double answer;
+			Console.Write("X+Y=Z Enter X:");
+			in1 = Convert.ToDouble(Console.ReadLine());
+			Console.Write("\nEnter Y:");
+			in2 = Convert.ToDouble(Console.ReadLine());
+			answer = in1 + in2;
+			Console.WriteLine("\nZ equals:" + answer);
+			return;
+
+		}
+		public static void Subtract()
+		{
+			//BASIC SUBTRACTION THINGAMAJIGGER
+			double in1, in2;
+			double answer;
+			Console.Write("X-Y=Z Enter X:");
+			in1 = Convert.ToDouble(Console.ReadLine());
+			Console.Write("\nEnter Y:");
+			in2 = Convert.ToDouble(Console.ReadLine());
+			answer = in1 - in2;
+			Console.WriteLine("Z equals:" + answer);
+			return;
+		}
+		public static void Multiply()
+		{
+			//BASIC MULTIPLICATION THINGAMAJIGGER
+			double in1, in2;
+			double answer;
+			Console.Write("X x Y = Z Enter X:");
+			in1 = Convert.ToDouble(Console.ReadLine());
+			Console.Write("\nEnter Y:");
+			in2 = Convert.ToDouble(Console.ReadLine());
+			answer = in1 * in2;
+			Console.WriteLine("\nZ equals:" + answer);
+			return;
+
+		}
+		public static void Divide()
+		{
+			//BASIC DIVISION THINGAMAJIGGER
+			double in1, in2;
+			double answer;
+			Console.Write("X / Y = Z Enter X:");
+			in1 = Convert.ToDouble(Console.ReadLine());
+			Console.Write("\nEnter Y:");
+			in2 = Convert.ToDouble(Console.ReadLine());
+			answer = in1 / in2;
+			Console.WriteLine("\nZ equals:" + answer);
+			return;
+
+		}
+	}
+	}
